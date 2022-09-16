@@ -5,15 +5,15 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: K8-SampleAspNetCore-Mvc-App
+      app: k8-sampleaspnetcore-mvc-app
   replicas: 2
   template:
     metadata:
       labels:
-        app: K8-SampleAspNetCore-Mvc-App
+        app: k8-sampleaspnetcore-mvc-app
     spec:
       containers:
-      - name: K8-SampleAspNetCore-Mvc-App 
+      - name: k8-sampleaspnetcore-mvc-app 
         image: hmptech/dotnetapps:v1
         ports:
         - containerPort: 5001
