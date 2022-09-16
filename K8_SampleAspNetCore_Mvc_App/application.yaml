@@ -4,20 +4,15 @@ metadata:
   name: argo-application-dotnetapps
   namespace: ns-dotnetapps
 spec:
-  project: default
-
-  source:
-    repoURL: https://github.com/HMPTech/k8
-    targetRevision: master
-    path: K8_SampleAspNetCore_Mvc_App/aksconfig
-  destination: 
-    server: https://kubernetes.default.svc
+  destination:    
     namespace: ns-dotnetapps
-
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: K8_SampleAspNetCore_Mvc_App/aksconfig
+    repoURL: 'https://github.com/HMPTech/k8'
+    targetRevision: master
+  project: default
   syncPolicy:
-    syncOptions:
-    - CreateNamespace=true
-
     automated:
-      selfHeal: true
       prune: true
+      selfHeal: true
