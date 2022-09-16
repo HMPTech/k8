@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: K8_SampleAspNetCore_Mvc_App-service
+  name: K8-SampleAspNetCore-Mvc-App-service
 spec:
   selector:
-    app: K8_SampleAspNetCore_Mvc_App
+    app: K8-SampleAspNetCore-Mvc-App
   ports:
   - port: 8080
     protocol: TCP

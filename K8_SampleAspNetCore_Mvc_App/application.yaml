@@ -1,8 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dotnetapps-argo-application
-  namespace: ns_dotnetapps
+  name: argo-application-dotnetapps
+  namespace: ns-dotnetapps
 spec:
   project: default
 
@@ -12,7 +12,7 @@ spec:
     path: K8_SampleAspNetCore_Mvc_App/aksconfig
   destination: 
     server: https://kubernetes.default.svc
-    namespace: ns_dotnetapps
+    namespace: ns-dotnetapps
 
   syncPolicy:
     syncOptions:
