@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dotnetapps
+  name: dotnetapps_dplmnt
 spec:
   selector:
     matchLabels:
-      app: dotnetapps
+      app: K8_SampleAspNetCore_Mvc_App
   replicas: 2
   template:
     metadata:
       labels:
-        app: dotnetapps
+        app: K8_SampleAspNetCore_Mvc_App
     spec:
       containers:
-      - name: dotnetapps 
+      - name: K8_SampleAspNetCore_Mvc_App 
         image: hmptech/dotnetapps:v1
         ports:
         - containerPort: 8080

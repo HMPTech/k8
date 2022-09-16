@@ -2,17 +2,17 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: dotnetapps-argo-application
-  namespace: dotnetapps
+  namespace: ns_dotnetapps
 spec:
   project: default
 
   source:
-    repoURL: https://gitlab.com/nanuchi/argocd-app-config.git
-    targetRevision: HEAD
-    path: dev
+    repoURL: https://github.com/HMPTech/k8
+    targetRevision: master
+    path: K8_SampleAspNetCore_Mvc_App/aksconfig
   destination: 
     server: https://kubernetes.default.svc
-    namespace: dotnetapps
+    namespace: ns_dotnetapps
 
   syncPolicy:
     syncOptions:

@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: dotnetapps-service
+  name: K8_SampleAspNetCore_Mvc_App-service
 spec:
   selector:
-    app: dotnetapps
+    app: K8_SampleAspNetCore_Mvc_App
   ports:
   - port: 8080
     protocol: TCP
