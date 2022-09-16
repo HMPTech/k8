@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K8_SampleAspNetCore_Mvc_App", "K8_SampleAspNetCore_Mvc_App\K8_SampleAspNetCore_Mvc_App.csproj", "{F815736D-1528-483E-9FD5-4DB57172EABB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F815736D-1528-483E-9FD5-4DB57172EABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F815736D-1528-483E-9FD5-4DB57172EABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F815736D-1528-483E-9FD5-4DB57172EABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F815736D-1528-483E-9FD5-4DB57172EABB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8237C68-6FED-4ECE-B412-F3F7257F7365}
+	EndGlobalSection
+EndGlobal
