@@ -6,6 +6,6 @@ spec:
   selector:
     app: k8-sampleaspnetcore-mvc-app
   ports:
-  - port: 5001
+  - port: 80
     protocol: TCP
-    targetPort: 5001
+    targetPort: 8001
