@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dotnetapps-service
+spec:
+  selector:
+    app: dotnetapps
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080

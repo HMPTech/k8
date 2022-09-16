@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnetapps
+spec:
+  selector:
+    matchLabels:
+      app: dotnetapps
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: dotnetapps
+    spec:
+      containers:
+      - name: dotnetapps 
+        image: hmptech/dotnetapps:v1
+        ports:
+        - containerPort: 8080
