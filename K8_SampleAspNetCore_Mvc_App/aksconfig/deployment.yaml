@@ -16,5 +16,6 @@ spec:
       containers:
       - name: k8-sampleaspnetcore-mvc-app 
         image: hmptech/dotnetapps:v1
+        imagePullPolicy: Never
         ports:
-        - containerPort: 8001
+        - containerPort: 5001
