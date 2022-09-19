@@ -4,9 +4,9 @@ metadata:
   name: argo-app-dotnetapps
   namespace: argocd
 spec:
-  destination:
-    namespace: argocd
+  destination:    
     server: 'https://kubernetes.default.svc'
+    namespace: ns-dotnetapps
   source:
     path: K8_SampleAspNetCore_Mvc_App/aksconfig
     repoURL: 'https://github.com/HMPTech/k8'

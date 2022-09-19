@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dplmnt-dotnetapps
-  namspace: default
+  namspace: ns-dotnetapps
 spec:
   selector:
     matchLabels:
