@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: ns-dotnetapps
+    namespace: argocd
     server: 'https://kubernetes.default.svc'
   source:
     path: K8_SampleAspNetCore_Mvc_App/aksconfig
@@ -16,3 +16,6 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+
