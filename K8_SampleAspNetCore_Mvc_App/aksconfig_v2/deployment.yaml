@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dplmnt-dotnetapps   
+spec:  
+  selector:
+    matchLabels:
+      app: k8-sampleaspnetcore-mvc-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: k8-sampleaspnetcore-mvc-app
+    spec:
+      containers:
+      - name: k8-sampleaspnetcore-mvc-app 
+        image: hmptech/dotnetapps:v1
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5001
