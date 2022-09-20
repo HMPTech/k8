@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: dplmnt-dotnetapps  
 spec:
+  namespace: ns-dotnetapps
   selector:
     matchLabels:
       app: k8-sampleaspnetcore-mvc-app

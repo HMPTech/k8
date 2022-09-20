@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    path: K8_SampleAspNetCore_Mvc_App/aksconfig
+    path: K8_SampleAspNetCore_Mvc_App/aksconfig_v1
     repoURL: 'https://github.com/HMPTech/k8'
     targetRevision: master
   destination:    
