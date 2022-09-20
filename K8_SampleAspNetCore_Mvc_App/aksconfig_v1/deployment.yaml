@@ -1,7 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dplmnt-dotnetapps    
+  name: dplmnt-dotnetapps
+  namespace: ns-dotnetapps  
 spec:  
   selector:
     matchLabels:
