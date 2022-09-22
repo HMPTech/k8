@@ -2,14 +2,15 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
-EXPOSE 80
+EXPOSE 5002
+ENv ASPNETCORE_URLS=http://*:5002
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["K8.Sample.AspNet.WebAPI/K8.Sample.AspNet.WebAPI.csproj", "K8.Sample.AspNet.WebAPI/"]
-RUN dotnet restore "K8.Sample.AspNet.WebAPI/K8.Sample.AspNet.WebAPI.csproj"
 COPY . .
-WORKDIR "/src/K8.Sample.AspNet.WebAPI"
+RUN dotnet restore "K8.Sample.AspNet.WebAPI.csproj"
+COPY . .
+WORKDIR /src
 RUN dotnet build "K8.Sample.AspNet.WebAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
