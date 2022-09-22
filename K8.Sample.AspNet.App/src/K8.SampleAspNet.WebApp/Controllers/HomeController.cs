@@ -1,8 +1,8 @@
-﻿using K8_SampleAspNetCore_Mvc_App.Models;
+﻿using K8.SampleAspNet.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace K8_SampleAspNetCore_Mvc_App.Controllers
+namespace K8.SampleAspNet.WebApp.Controllers
 {
     public class HomeController : Controller
     {

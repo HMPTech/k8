@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K8_SampleAspNetCore_Mvc_App", "K8_SampleAspNetCore_Mvc_App\K8_SampleAspNetCore_Mvc_App.csproj", "{F815736D-1528-483E-9FD5-4DB57172EABB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "K8.SampleAspNet.WebApp", "K8.SampleAspNet.WebApp\K8.SampleAspNet.WebApp.csproj", "{F815736D-1528-483E-9FD5-4DB57172EABB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K8.Sample.AspNet.WebAPI", "K8.Sample.AspNet.WebAPI\K8.Sample.AspNet.WebAPI.csproj", "{FA6D7E5A-88E6-4B00-A157-848E3417AC05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F815736D-1528-483E-9FD5-4DB57172EABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F815736D-1528-483E-9FD5-4DB57172EABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F815736D-1528-483E-9FD5-4DB57172EABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA6D7E5A-88E6-4B00-A157-848E3417AC05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA6D7E5A-88E6-4B00-A157-848E3417AC05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA6D7E5A-88E6-4B00-A157-848E3417AC05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA6D7E5A-88E6-4B00-A157-848E3417AC05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

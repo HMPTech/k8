@@ -1,4 +1,4 @@
-namespace K8_SampleAspNetCore_Mvc_App.Models
+namespace K8.SampleAspNet.WebApp.Models
 {
     public class ErrorViewModel
     {
