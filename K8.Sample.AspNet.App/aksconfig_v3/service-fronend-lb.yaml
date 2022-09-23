@@ -4,9 +4,9 @@ metadata:
   name: k8-lb-service
 spec:
   selector:
-    app: k8-sampleaspnetcore-mvc-app
+    app: k8-sampleaspnetcore-web-app
   ports:
-    - port: 6002
-      targetPort: 5002
+    - port: 6001
+      targetPort: 5001
       nodePort: 30010
   type: LoadBalancer

@@ -1,5 +1,6 @@
 ﻿using K8.SampleAspNet.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Diagnostics;
 
 namespace K8.SampleAspNet.WebApp.Controllers
@@ -15,6 +16,10 @@ namespace K8.SampleAspNet.WebApp.Controllers
 
         public IActionResult Index()
         {
+            string weatherDetails = GetWeatherDetails().GetAwaiter().GetResult();
+
+            ViewBag.WeatherDetails = weatherDetails;
+
             return View();
         }
 
@@ -27,6 +32,21 @@ namespace K8.SampleAspNet.WebApp.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public async Task<string> GetWeatherDetails()
+        {
+            string apiResponse = String.Empty;
+
+            using (var httpClient = new HttpClient())
+            {
+                using (var response = await httpClient.GetAsync("http://k8-backendapi-cluster-service.default.svc.cluster.local/weatherforecast"))
+                {
+                    apiResponse = await response.Content.ReadAsStringAsync();
+
+                }
+            }
+            return apiResponse;
         }
     }
 }
