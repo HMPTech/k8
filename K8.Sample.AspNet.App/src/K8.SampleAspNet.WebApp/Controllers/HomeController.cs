@@ -36,15 +36,23 @@ namespace K8.SampleAspNet.WebApp.Controllers
 
         public async Task<string> GetWeatherDetails()
         {
+
             string apiResponse = String.Empty;
 
-            using (var httpClient = new HttpClient())
+            try
             {
-                using (var response = await httpClient.GetAsync("http://k8-backendapi-cluster-service.default.svc.cluster.local/weatherforecast"))
+                using (var httpClient = new HttpClient())
                 {
-                    apiResponse = await response.Content.ReadAsStringAsync();
+                    using (var response = await httpClient.GetAsync("http://k8-backendapi-cluster-service:6002/weatherforecast"))
+                    {
+                        apiResponse = await response.Content.ReadAsStringAsync();
 
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                apiResponse = ex.ToString();
             }
             return apiResponse;
         }

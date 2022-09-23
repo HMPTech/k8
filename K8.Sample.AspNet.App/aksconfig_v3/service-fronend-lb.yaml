@@ -7,6 +7,5 @@ spec:
     app: k8-sampleaspnetcore-web-app
   ports:
     - port: 6001
-      targetPort: 5001
-      nodePort: 30010
+      targetPort: 5001      
   type: LoadBalancer
