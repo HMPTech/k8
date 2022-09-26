@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: k8-sampleaspnetcore-web-app 
-        image: hmptech/dotnet-webapi:v1
+        image: hmptech/dotnet-web-app:v1
         imagePullPolicy: Never
         ports:
         - containerPort: 5001
