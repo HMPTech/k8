@@ -43,7 +43,7 @@ namespace K8.SampleAspNet.WebApp.Controllers
             {
                 using (var httpClient = new HttpClient())
                 {
-                    using (var response = await httpClient.GetAsync("http://k8-backendapi-cluster-service:6002/weatherforecast"))
+                    using (var response = await httpClient.GetAsync("http://k8-backendapi-cluster-service.ns-dotnetapps.svc.cluster.local:6002/weatherforecast"))               
                     {
                         apiResponse = await response.Content.ReadAsStringAsync();
 
