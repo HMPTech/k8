@@ -4,7 +4,7 @@ metadata:
   name: k8-backendapi-cluster-service
 spec:
   selector:
-    app: k8-sampleaspnetcore-web-app
+    app: k8-sampleaspnetcore-web-api
   ports:
     - port: 6002
       targetPort: 5002
