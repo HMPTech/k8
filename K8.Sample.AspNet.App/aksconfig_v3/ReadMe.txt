@@ -1,4 +1,9 @@
-This is an enabler to create a deployment. It uses Loadbalance as service
+This is an enabler to do commnucation from FrontEnd to BackEnd using cluster service.
+
+LB
+FronEnd Web
+CLuster Service
+BackEnd Api
 
 
 
