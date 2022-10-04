@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8-mssql-lb-service
+spec:
+  selector:
+    app: mssql
+  ports:
+    - protocol: TCP
+      port: 1414
+      targetPort: 1433
+  type: LoadBalancer
