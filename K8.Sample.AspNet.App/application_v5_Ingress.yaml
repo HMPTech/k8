@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    path: K8.Sample.AspNet.App/aksconfig_v3
+    path: K8.Sample.AspNet.App/aksconfig_v5_Ingress
     repoURL: 'https://github.com/HMPTech/k8'
     targetRevision: master
   destination:    
