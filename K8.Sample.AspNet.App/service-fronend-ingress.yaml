@@ -1,0 +1,33 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: k8-ingress
+spec:
+  rules:
+  - host: localhost
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: k8-fronend-cluster-service
+            port:
+              number: 6001
+      - pathType: Prefix
+        path: "/test"
+        backend:
+          service:
+            name: k8-fronend-cluster-service
+            port:
+              number: 6001
+  - host: "*.foo.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/foo"
+        backend:
+          service:
+            name: k8-fronend-cluster-service
+            port:
+              number: 6001

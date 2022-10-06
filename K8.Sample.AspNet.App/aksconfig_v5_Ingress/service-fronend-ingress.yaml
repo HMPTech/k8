@@ -7,27 +7,6 @@ spec:
   - host: localhost
     http:
       paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: k8-fronend-cluster-service
-            port:
-              number: 6001
-      - pathType: Prefix
-        path: "/test"
-        backend:
-          service:
-            name: k8-fronend-cluster-service
-            port:
-              number: 6001
-  - host: "*.foo.com"
-    http:
-      paths:
-      - pathType: Prefix
-        path: "/foo"
-        backend:
-          service:
-            name: k8-fronend-cluster-service
-            port:
-              number: 6001
+      - backend:
+          serviceName:  k8-fronend-cluster-service
+          servicePort:  6001
