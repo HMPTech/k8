@@ -6,7 +6,7 @@ spec:
   rules:
   - host: localhost
   - http:
-      paths:
+      paths: /
       - backend:
           service:
             name: k8-fronend-cluster-service
