@@ -4,10 +4,11 @@ metadata:
   name: k8-ingress
 spec:  
   rules:
-  - host: localhost
+  - host: localhost.com
   - http:
-      paths: /
-      - backend:
+      paths:
+      - path: /
+        backend:
           service:
             name: k8-fronend-cluster-service
             port:
