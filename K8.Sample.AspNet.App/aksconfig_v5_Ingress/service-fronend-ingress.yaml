@@ -8,6 +8,8 @@ spec:
   - host: localhost
     http:
       paths:
+      - path: /
+        pathType: Prefix
       - backend:
           service:
             name:  k8-fronend-cluster-service
