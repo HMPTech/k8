@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: k8-ingress
-  namespace: ingress-nginx
+  namespace: ns-dotnetapps
 spec:
   rules:
   - host: localhost
