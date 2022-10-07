@@ -10,7 +10,7 @@ spec:
       paths:
       - path: /
         pathType: Prefix
-      - backend:
+        backend:
           service:
             name:  k8-fronend-cluster-service
             port:  6001
