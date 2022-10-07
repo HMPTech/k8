@@ -13,4 +13,5 @@ spec:
         backend:
           service:
             name:  k8-fronend-cluster-service
-            port:  6001
+            port:  
+                number: 6001
