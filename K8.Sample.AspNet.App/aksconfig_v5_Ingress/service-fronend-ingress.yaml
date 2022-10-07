@@ -2,12 +2,13 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: k8-ingress
-  namespace: ns-dotnetapps
+  namespace: ingress-nginx
 spec:
   rules:
   - host: localhost
     http:
       paths:
       - backend:
-          serviceName:  k8-fronend-cluster-service
-          servicePort:  6001
+          service:
+            name:  k8-fronend-cluster-service
+            port:  6001
