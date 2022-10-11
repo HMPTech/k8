@@ -8,8 +8,7 @@ spec:
   - host: k8learning.com
     http:
       paths:
-      - path: /k8
-        pathType: Prefix
+      - path: /k8        
         backend:
           service:
             name:  k8-fronend-cluster-service
