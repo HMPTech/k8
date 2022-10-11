@@ -2,8 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: k8-ingress
-  namespace: ns-dotnetapps
-  annotations:kubernetes.io/ingress.class: nginx
+  namespace: ns-dotnetapps          
 spec:
   rules:
   - host: k8learning.com
